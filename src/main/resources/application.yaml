@@ -1,0 +1,26 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: gateway
+  profiles:
+    active: local
+  cloud:
+    gateway:
+      routes:
+        - id: mc-dialog
+          uri: lb://mc-dialog
+          predicates:
+            - Path=/api/v1/dialogs/**
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
