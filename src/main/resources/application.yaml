@@ -8,10 +8,40 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: mc-account
+          uri: lb://mc-account
+          predicates:
+            - Path=/api/v1/account/**
+
+        - id: mc-auth
+          uri: lb://mc-auth
+          predicates:
+            - Path=/api/v1/auth/**
+
+        - id: mc-country
+          uri: lb://mc-country
+          predicates:
+            - Path=/api/v1/geo/**
+
         - id: mc-dialog
           uri: lb://mc-dialog
           predicates:
             - Path=/api/v1/dialogs/**
+
+        - id: mc-friends
+          uri: lb://mc-friends
+          predicates:
+            - Path=/api/v1/friends/**
+
+        - id: mc-notification
+          uri: lb://mc-notification
+          predicates:
+            - Path=/api/v1/notifications/**
+
+        - id: mc-post
+          uri: lb://mc-post
+          predicates:
+            - Path=/api/v1/post/**
 
 
 management:
