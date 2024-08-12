@@ -10,7 +10,8 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: ${ORIGINS_URI:http://79.174.80.200}
+            allowedOrigins:
+              - "http://79.174.80.200"
             allowCredentials: true
             allowedHeaders: "*"
             allowedMethods: "*"
