@@ -12,8 +12,8 @@ spring:
           '[/**]':
             allowedOrigins: ${ORIGINS_URI:http://79.174.80.200}
             allowCredentials: true
-            allowedHeaders: "*"
-            allowedMethods: "*"
+            allowedHeaders: *
+            allowedMethods: *
       routes:
         - id: mc-account
           uri: lb://mc-account
