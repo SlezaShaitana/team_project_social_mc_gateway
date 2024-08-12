@@ -10,11 +10,15 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins:
-              - "http://79.174.80.200"
+            allowedOrigins: "*"
             allowCredentials: true
             allowedHeaders: "*"
-            allowedMethods: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
       routes:
         - id: mc-account
           uri: lb://mc-account
