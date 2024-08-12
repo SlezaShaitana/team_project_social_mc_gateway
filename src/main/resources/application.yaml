@@ -11,7 +11,7 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins:
-              - "http://79.174.80.200"
+              - "http://79.174.80.200:80"
             allowCredentials: true
             allowedHeaders: "*"
             allowedMethods: "*"
