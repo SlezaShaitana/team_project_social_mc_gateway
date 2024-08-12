@@ -7,6 +7,13 @@ spring:
     active: local
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: ${ORIGINS_URI:http://79.174.80.200}
+            allowCredentials: true
+            allowedHeaders: "*"
+            allowedMethods: "*"
       routes:
         - id: mc-account
           uri: lb://mc-account
