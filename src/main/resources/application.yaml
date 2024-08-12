@@ -9,6 +9,7 @@ spring:
     gateway:
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - AddResponseHeader=x-content-type-options nosniff
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -51,7 +52,6 @@ spring:
           uri: lb://mc-post
           predicates:
             - Path=/api/v1/post/**
-
 
 management:
   endpoints:
