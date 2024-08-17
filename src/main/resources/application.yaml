@@ -62,4 +62,4 @@ management:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://mc-eureka-conteiner:8888/eureka/
