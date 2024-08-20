@@ -38,12 +38,12 @@ spring:
             - Path=/api/v1/dialogs/**
 
         - id: mc-friends
-          uri: http://mc-friends-conteiner:8089
+          uri: http://mc-friends-conteiner:8090
           predicates:
             - Path=/api/v1/friends/**
 
         - id: mc-notification
-          uri: http://mc-notification-conteiner:8090
+          uri: http://mc-notification-conteiner:8089
           predicates:
             - Path=/api/v1/notifications/**
 
