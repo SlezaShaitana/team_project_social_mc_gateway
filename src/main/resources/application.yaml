@@ -7,6 +7,11 @@ spring:
     active: local
   cloud:
     gateway:
+
+      httpclient:
+        connect-timeout: 5000
+        response-timeout: 120000
+
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
       globalcors:
@@ -56,6 +61,8 @@ spring:
           uri: http://mc-storage-conteiner:8092
           predicates:
             - Path=/api/v1/storage/**
+
+
 
 
 management:
