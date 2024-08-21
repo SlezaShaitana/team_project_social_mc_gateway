@@ -52,6 +52,11 @@ spring:
           predicates:
             - Path=/api/v1/post/**
 
+        - id: mc-storage
+          uri: http://mc-storage-conteiner:8092
+          predicates:
+            - Path=/api/v1/storage/**
+
 
 management:
   endpoints:
